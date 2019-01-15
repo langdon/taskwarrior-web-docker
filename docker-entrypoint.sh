@@ -13,8 +13,8 @@ if ! test -e /root/.taskrc; then
 
     if [ "$TASKD_SERVER" ]; then
     	echo "Sync enable."
-        if [[ -f ${CLIENT_CERT_PATH}/credentials ]]; then
-    	    TASKD_CREDENTIALS=`cat ${CLIENT_CERT_PATH}/credentials`
+        if [[ -f ${CLIENT_CERT_PATH}/client.credentials ]]; then
+    	    TASKD_CREDENTIALS=`cat ${CLIENT_CERT_PATH}/client.credentials`
     	fi
 
     	task config taskd.server 		-- ${TASKD_SERVER}
