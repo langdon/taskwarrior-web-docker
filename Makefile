@@ -1,9 +1,7 @@
+.PHONY: default build
 
-.PHONY: all
-
-all: build
+default: build
 
 build:
-	docker build -t ndufour/taskwarrior-web .
-
+	@docker build -t langdon/taskwarrior-web .
 
